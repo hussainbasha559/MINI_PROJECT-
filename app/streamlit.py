@@ -168,6 +168,7 @@ elif page == "🔍 Prediction":
         res = requests.post(API_URL, json=payload)
         try:
             r   = res.json()
+            st.write("API says:", r) 
             if r["prediction"] == 1:
                 st.success(f"### {r['result']}")
             else:
