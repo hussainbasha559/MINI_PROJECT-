@@ -164,7 +164,7 @@ elif page == "🔍 Prediction":
             "Mortgage": mortgage, 
             "CD_Account": cd_acc, 
         }
-        API_URL = os.getenv("API_URL", "https://mini-project-yyii.onrender.com/")
+        API_URL = os.getenv("API_URL", "https://mini-project-yyii.onrender.com/predict")
         res = requests.post(API_URL, json=payload)
         try:
             r   = res.json()
