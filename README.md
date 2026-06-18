@@ -99,24 +99,24 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 Run these one by one:
-1. `notebooks/1_data_cleaning.ipynb`
-2. `notebooks/2_eda.ipynb`
-3. `notebooks/3_training.ipynb`
-4. `notebooks/4_advanced_pandas.ipynb`
+1. `Notebooks/Data_cleaning.ipynb`
+2. `Notebooks/EDA.ipynb`
+3. `Notebooks/Training.ipynb`
+4. `Notebooks/Advanced.ipynb`
 
 > ⚠️ Must run notebooks first — they create the database and model files.
 
-### Step 3 — Start FastAPI (Terminal 1)
+### Step 3 — Start FastAPI 
 ```bash
 uvicorn app.api:app --reload --port 8000
 ```
-API runs at: **http://localhost:8000**
+API runs at: **https://mini-project-yyii.onrender.com/**
 
-### Step 4 — Start Streamlit (Terminal 2)
+### Step 4 — Start Streamlit 
 ```bash
 streamlit run app/streamlit_app.py
 ```
-App runs at: **http://localhost:8501**
+App runs at: **https://shaikhussainbashaa9.streamlit.app/**
 
 ---
 
@@ -171,7 +171,7 @@ App runs at: **http://localhost:8501**
 
 ## ⚙️ API Usage
 
-**Endpoint:** `POST http://localhost:8000/predict`
+**Endpoint:** `POST https://mini-project-yyii.onrender.com/predict`
 
 **Request Body:**
 ```json
