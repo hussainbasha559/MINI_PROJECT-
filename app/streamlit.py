@@ -17,8 +17,9 @@ BASE = os.path.dirname(os.path.dirname(__file__))
 def load_data():
     # conn = sqlite3.connect(os.path.join(BASE, "data/bank_loan.db"))
     DB_PATH = os.path.join(os.path.dirname(__file__), "../data/bank_loan.db")
-    df = pd.read_sql("SELECT * FROM clean_data", DB_PATH)
-    DB_PATH.close()
+    conn = sqlite3.connect(DB_PATH)
+    df = pd.read_sql("SELECT * FROM clean_data", conn)
+    conn.close()
     return df
 
 df = load_data()
